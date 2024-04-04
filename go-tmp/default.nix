@@ -4,12 +4,12 @@
 }:
 # I think macos has problems with this
 let
-  func =
+  buildModule =
     if system == "x86_64-apple-darwin" || system == "x86_64-darwin" || system == "darwin"
     then pkgs.buildGoModule
     else pkgs.buildGoModule.override {stdenv = pkgs.pkgsStatic.stdenv;};
 in
-  func rec {
+  buildModule rec {
     pname = "go-app";
     version = import ./version.nix;
     src = ./.;
@@ -18,7 +18,16 @@ in
     ];
 
     CGO_ENABLED = 0;
-    vendorHash = pkgs.lib.fakeSha256;
+    # use null if there are no dependencies
+    # use the fakeHash to figure out the hash of the dependencies
+    # if there are some
+    # 
+    # You can also leave it as null and run `go mod vendor` to
+    # download all the dependencies and cache them in the repo under ./vendor
+    # 
+    # see:
+    # https://nixos.org/manual/nixpkgs/stable/#ex-buildGoModule
+    vendorHash = null; #pkgs.lib.fakeHash;
 
     meta = with pkgs.lib; {
       description = "TODO: A discord program";

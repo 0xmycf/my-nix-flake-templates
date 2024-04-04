@@ -41,10 +41,13 @@
       };
 
       go = {
-        path = ./go;
+        path = ./go-tmp;
         description = "A go template";
         welcomeText = ''
           You just created a go-flake template.
+          You should grep for TODO and replace the fakeSha256 with the actual sha256.
+
+          `rg TODO flake.nix`
 
           `nix develop --run fish`
 
