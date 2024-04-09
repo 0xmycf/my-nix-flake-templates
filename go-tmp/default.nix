@@ -30,7 +30,7 @@ in
     vendorHash = null; #pkgs.lib.fakeHash;
 
     meta = with pkgs.lib; {
-      description = "TODO: A discord program";
+      description = "TODO: A go program";
       homepage = "TODO: homepage";
       license = licenses.mit;
       maintainers = ["github.com/0xmycf"];
