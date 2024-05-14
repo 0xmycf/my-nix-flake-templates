@@ -2,16 +2,16 @@
   description = "A collection of flake templates (this is based on nixos/templates)";
 
   inputs = {
-    temps.url = "github:NixOS/templates?ref=bfc872cab560e3c0852bd073a52eff8093cfeaa6";
+    temps.url = "github:NixOS/templates";
+    utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     self,
     temps,
+    utils,
   }: {
     templates = {
-      trivial = temps.templates.trivial;
-
       haskell-flake = {
         path = ./haskell;
         description = "A haskell-flake template";
@@ -55,8 +55,9 @@
 
         '';
       };
-    };
+    } // temps.templates 
+      // utils.templates;
 
-    defaultTemplate = temps.templates.trivial;
+    defaultTemplate = temps.templates.utils-generic;
   };
 }
