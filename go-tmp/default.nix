@@ -21,10 +21,10 @@ in
     # use null if there are no dependencies
     # use the fakeHash to figure out the hash of the dependencies
     # if there are some
-    # 
+    #
     # You can also leave it as null and run `go mod vendor` to
     # download all the dependencies and cache them in the repo under ./vendor
-    # 
+    #
     # see:
     # https://nixos.org/manual/nixpkgs/stable/#ex-buildGoModule
     vendorHash = null; #pkgs.lib.fakeHash;
