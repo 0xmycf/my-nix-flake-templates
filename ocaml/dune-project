@@ -1,0 +1,23 @@
+(lang dune 3.10)
+
+(name helloworld)
+
+(generate_opam_files true)
+
+(source
+ (github 0xmycf/helloworld))
+
+(authors "0xmycf")
+
+(maintainers "0xmycf")
+
+(license MIT)
+
+(documentation https://github.com/0xmycf/helloworld)
+
+(package
+ (name helloworld)
+ (synopsis "A simple ocaml template project")
+ (description "This project is a simple ocaml template project.")
+ (depends ocaml dune))
+

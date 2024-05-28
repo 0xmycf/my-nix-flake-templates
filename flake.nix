@@ -30,6 +30,18 @@
           '';
         };
 
+        ocaml = {
+          path = ./ocaml;
+          description = "(mycf) An ocaml-flake template";
+          welcomeText = ''
+            You just created an ocaml-flake template.
+
+            `nix develop --run fish`
+
+            `dune exec helloworld` or `dune build` or `dune test`
+          '';
+        };
+
         gleam = {
           path = ./gleam;
           description = "(mycf) A gleam template";
