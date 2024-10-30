@@ -15,6 +15,9 @@
       temps.templates
       // utils.templates
       // {
+
+        default = utils.templates.each-system;
+
         haskell-flake = {
           path = ./haskell;
           description = "(mycf) A haskell-flake template";
@@ -72,6 +75,5 @@
         };
       };
 
-    defaultTemplate = utils.templates.each-system;
   };
 }
