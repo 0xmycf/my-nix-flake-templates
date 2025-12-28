@@ -54,9 +54,15 @@ haskell-hello:
 haskell-nix:
   description: An haskell.nix template using hix
   type: template
+haskell-simple:
+  description: "(mycf) A minimalistic haskell-flake template"
+  type: template
 hercules-ci:
   description: An example for Hercules-CI, containing only the necessary attributes
     for adding to your project.
+  type: template
+latexmk:
+  description: A simple LaTeX template for writing documents with latexmk
   type: template
 ocaml:
   description: "(mycf) An ocaml-flake template"
@@ -66,6 +72,9 @@ pandoc-xelatex:
   type: template
 python:
   description: Python template, using poetry2nix
+  type: template
+ruby:
+  description: Flake for building ruby gems
   type: template
 rust:
   description: Rust template, using Naersk
@@ -81,6 +90,16 @@ simpleContainer:
   type: template
 trivial:
   description: A very basic flake
+  type: template
+typescript-p5js:
+  description: |-
+    A template combining a node webserver and a dev environment
+                for frontend typescript development
+  type: template
+typescript-pnpm:
+  description: |-
+    A template combining a node webserver and a dev environment
+                for frontend typescript development
   type: template
 utils-generic:
   description: Simple, all-rounder template with utils enabled and devShell populated

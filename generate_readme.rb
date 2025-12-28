@@ -4,7 +4,7 @@
 require "json"
 require "yaml"
 
-output = `nix flake show --json github:0xmycf/my-nix-flake-templates`
+output = `nix flake show --json`
 
 # hacky but sexy
 class String
