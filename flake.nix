@@ -18,6 +18,21 @@
 
         default = utils.templates.each-system;
 
+        haskell-simple = {
+          path = ./haskell-simple;
+          description = "(mycf) A minimalistic haskell-flake template";
+          welcomeText = ''
+            You just created a haskell-flake template.
+
+            `nix develop --run fish`
+
+            `nix run`
+
+            `nix build`
+
+          '';
+        };
+
         haskell-flake = {
           path = ./haskell;
           description = "(mycf) A haskell-flake template";

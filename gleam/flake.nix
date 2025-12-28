@@ -18,7 +18,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         unstable-pkgs = nixpkgs-unstable.legacyPackages.${system};
       in {
-        devShell = pkgs.mkShell {
+        devShell = pkgs.mkShellNoCC {
           buildInputs = with pkgs; [
             unstable-pkgs.gleam
             erlang
