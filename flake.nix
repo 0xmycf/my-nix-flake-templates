@@ -15,7 +15,6 @@
       temps.templates
       // utils.templates
       // {
-
         default = utils.templates.each-system;
 
         haskell-simple = {
@@ -88,7 +87,22 @@
 
           '';
         };
-      };
 
+        janet = {
+          path = ./janet;
+          description = "(mycf) A minimalistic janet template";
+          welcomeText = ''
+            You just created a janet template.
+            The project has the default name `proj-name`,
+            rename with `sed -i "s/proj-name/<your-name>/g" **.janet`.
+
+            `make deps`     -- installing dependencies
+            `make build`    -- building the executable
+            `make run`      -- building and executing the executable
+            `make install`  -- install the dependency to `~/my-scripts/bin/<proj-name>`
+
+          '';
+        };
+      };
   };
 }

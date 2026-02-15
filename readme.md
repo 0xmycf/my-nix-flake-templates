@@ -61,6 +61,9 @@ hercules-ci:
   description: An example for Hercules-CI, containing only the necessary attributes
     for adding to your project.
   type: template
+janet:
+  description: "(mycf) A minimalistic janet template"
+  type: template
 latexmk:
   description: A simple LaTeX template for writing documents with latexmk
   type: template
